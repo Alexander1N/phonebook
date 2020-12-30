@@ -3,7 +3,7 @@ spl_autoload_register(function ($class_name) {
 	include 'class/' . $class_name . '.php';
 });
 
-$db = new DB('localhost', 'root', '', 'book');
+$db = new db('localhost', 'root', '', 'book');
 $customer = new customer($db);
 $action = (isset($_GET['action']) ? $_GET['action'] : '');
 
